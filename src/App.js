@@ -12,8 +12,7 @@ export default class App extends Component {
     };
   }
   async getUsersData() {
-    const res = await axios.get(
-      "https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=312&date=16-05-2021"
+    const res = await axios.get(''
     );
     console.log(res.data);
     this.setState({ loading: false, users: res.data.centers });
@@ -68,6 +67,10 @@ export default class App extends Component {
         accessor: "sessions.0.available_capacity_dose2"
       }
     ];
-    return <ReactTable data={this.state.users} columns={columns} />;
+    return (
+    
+    // <ReactTable data={this.state.users} columns={columns} />
+    <h1>Work In Progress....</h1>
+    );
   }
 }
